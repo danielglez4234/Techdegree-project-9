@@ -123,7 +123,7 @@ router.post("/users", [
         // Set the status to 201 Created and end the response.
         res.status(201).end();
       } catch (err) {
-        next(err);
+        res.status(400).json({ Error: err });
       }
     }
   }
